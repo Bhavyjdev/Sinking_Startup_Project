@@ -1,0 +1,2587 @@
+                   <!DOCTYPE html>
+                    <html>
+                    <head>
+                        <style></style>
+                    </head>
+                    <body>
+                        
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                        <style></style>
+                    </head>
+                    <body>
+                        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ola Electric Customer Experience Improvement Strategy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <style>
+        :root {
+            /* Primary Theme Colors */
+            --primary-color: #6c63ff;
+            --primary-light: #8a84ff;
+            --primary-dark: #5046e5;
+            /* Secondary & Background Colors */
+            --secondary-color: #12122a;
+            --background-color: #0a0a1a;
+            --card-bg: #1a1a32;
+            
+            /* Accent Colors */
+            --accent-color: #ff6b9d;
+            --accent-secondary: #00d9b5;
+            /* Text Colors */
+            --text-color: #f5f5f7;
+            --light-text: #b8b8c0;
+            --muted-text: #8a8a9a;
+            /* Shadows */
+            --card-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+            --button-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            /* Effects */
+            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            
+            /* Borders & Radius */
+            --border-radius: 12px;
+            --border-color: rgba(255, 255, 255, 0.15);
+            
+            /* Spacing */
+            --padding: 16px;
+            --margin: 16px;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Alegreya SC', sans-serif;
+        }
+        
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--padding);
+        }
+        
+        header {
+            background-color: var(--secondary-color);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .logo span {
+            color: var(--accent-color);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav ul li a {
+            color: var(--light-text);
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 500;
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-light);
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .hero {
+            padding: 6rem 0 4rem;
+            background: linear-gradient(135deg, var(--secondary-color), var(--background-color));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            right: -10%;
+            width: 50%;
+            height: 80%;
+            background: radial-gradient(circle, var(--primary-color) 0%, transparent 70%);
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-text {
+            max-width: 600px;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-text p {
+            font-size: 1.2rem;
+            color: var(--light-text);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .hero-image {
+            width: 40%;
+            position: relative;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--primary-color), var(--primary-light));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            box-shadow: var(--button-shadow);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+        }
+        
+        .section {
+            padding: 5rem 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-light);
+        }
+        
+        .section-header p {
+            color: var(--light-text);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+            border-color: var(--primary-color);
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+        }
+        
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-light);
+        }
+        
+        .card p {
+            color: var(--light-text);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .card-icon {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .stat-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-secondary);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--accent-secondary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: var(--light-text);
+            font-weight: 500;
+        }
+.taxonomy-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.taxonomy-description {
+    margin-bottom: 1rem;
+}
+
+.taxonomy-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Category Styles */
+.taxonomy-category {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.taxonomy-category:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.category-header {
+    padding: 1rem;
+    background-color: rgba(108, 99, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.category-icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.category-header h4 {
+    margin: 0;
+    flex-grow: 1;
+}
+
+.severity-indicator {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.severity-indicator.high {
+    background-color: rgba(255, 59, 48, 0.2);
+    color: #ff3b30;
+}
+
+.severity-indicator.medium {
+    background-color: rgba(255, 204, 0, 0.2);
+    color: #ffcc00;
+}
+
+.severity-indicator.low {
+    background-color: rgba(52, 199, 89, 0.2);
+    color: #34c759;
+}
+
+/* Subcategory Styles */
+.subcategory-list {
+    padding: 1rem;
+    list-style: none;
+    margin: 0;
+}
+
+.subcategory-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.subcategory-list li:last-child {
+    border-bottom: none;
+}
+
+.subcategory-name {
+    flex-grow: 1;
+}
+
+.severity-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+}
+
+.severity-badge[data-level="1"] {
+    background-color: #34c759; /* Green */
+}
+
+.severity-badge[data-level="2"] {
+    background-color: #7ed321; /* Light Green */
+}
+
+.severity-badge[data-level="3"] {
+    background-color: #ffcc00; /* Yellow */
+}
+
+.severity-badge[data-level="4"] {
+    background-color: #ff9500; /* Orange */
+}
+
+.severity-badge[data-level="5"] {
+    background-color: #ff3b30; /* Red */
+}
+
+/* Legend Styles */
+.taxonomy-legend {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.taxonomy-legend h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.severity-scale {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.severity-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.severity-label {
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
+
+.severity-description {
+    font-size: 0.8rem;
+    color: #b8b8c0;
+}
+
+/* Stats Styles */
+.taxonomy-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.taxonomy-chart-container {
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.taxonomy-stats-summary {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.taxonomy-stats-summary h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .taxonomy-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .taxonomy-chart-container {
+        height: 250px;
+    }
+}
+        
+        .tabs {
+            margin: 3rem 0;
+        }
+        
+        .tab-list {
+            display: flex;
+            list-style: none;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+            overflow-x: auto;
+            padding-bottom: 0.5rem;
+        }
+        
+        .tab-item {
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: var(--transition);
+            color: var(--light-text);
+            white-space: nowrap;
+        }
+        
+        .tab-item.active {
+            border-bottom-color: var(--primary-color);
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .tab-content {
+            padding: 1rem 0;
+        }
+        
+        .tab-panel {
+            display: none;
+        }
+        
+        .tab-panel.active {
+            display: block;
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 2rem 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+        
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            padding-right: 50%;
+            text-align: right;
+        }
+        
+        .timeline-item:nth-child(even) {
+            padding-left: 50%;
+            text-align: left;
+        }
+        
+        .timeline-content {
+            position: relative;
+            padding: 1.5rem;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        
+        .timeline-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-light);
+        }
+        
+        .timeline-content p {
+            color: var(--light-text);
+            line-height: 1.6;
+        }
+        
+        .timeline-date {
+            position: absolute;
+            top: -10px;
+            width: 120px;
+            padding: 0.5rem 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 2rem;
+            text-align: center;
+            font-weight: 500;
+            box-shadow: var(--button-shadow);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-date {
+            right: 275px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-date {
+            left: 275px;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            border: 4px solid var(--card-bg);
+            box-shadow: 0 0 0 4px var(--primary-color);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-dot {
+            right: 390px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: 390px;
+        }
+        
+        .chart-container {
+            height: 400px;
+            margin: 3rem 0;
+            position: relative;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+        }
+        
+        th, td {
+            padding: 1rem 1.5rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: var(--primary-dark);
+            color: white;
+            font-weight: 500;
+        }
+        
+        tr {
+            background-color: var(--card-bg);
+            transition: var(--transition);
+        }
+        
+        tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        
+        tr:hover {
+            background-color: rgba(108, 99, 255, 0.1);
+        }
+        
+        td {
+            border-bottom: 1px solid var(--border-color);
+            color: var(--light-text);
+        }
+        
+        .progress-container {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            height: 0.8rem;
+            width: 100%;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            border-radius: 1rem;
+            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+            transition: width 1s ease-in-out;
+        }
+        
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            background-color: var(--accent-secondary);
+            color: var(--secondary-color);
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tag.priority-high {
+            background-color: var(--accent-color);
+        }
+        
+        .tag.priority-medium {
+            background-color: #FFA500;
+        }
+        
+        .tag.priority-low {
+            background-color: var(--accent-secondary);
+        }
+        
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        
+        .rating-star {
+            color: #FFD700;
+            font-size: 1.2rem;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .team-member {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+        }
+        
+        .team-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 1rem;
+            border: 4px solid var(--primary-color);
+        }
+        
+        .team-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .team-name {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--primary-light);
+            margin-bottom: 0.5rem;
+        }
+        
+        .team-role {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .team-bio {
+            color: var(--light-text);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        .team-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .team-social a {
+            color: var(--light-text);
+            transition: var(--transition);
+        }
+        
+        .team-social a:hover {
+            color: var(--primary-color);
+        }
+        
+        .testimonial-section {
+            background-color: var(--secondary-color);
+            padding: 5rem 0;
+            margin: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonial-section::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            width: 50%;
+            height: 80%;
+            background: radial-gradient(circle, var(--accent-color) 0%, transparent 70%);
+            opacity: 0.05;
+            z-index: 0;
+        }
+        
+        .testimonial-container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+        
+        .testimonial-quote {
+            font-size: 3rem;
+            color: var(--accent-color);
+            opacity: 0.2;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+        
+        .testimonial-text {
+            color: var(--light-text);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .testimonial-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .testimonial-info h4 {
+            font-size: 1.1rem;
+            color: var(--primary-light);
+            margin-bottom: 0.25rem;
+        }
+        
+        .testimonial-info p {
+            color: var(--muted-text);
+            font-size: 0.9rem;
+        }
+        /* Customer Segmentation Styles */
+.segmentation-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.segmentation-charts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.chart-box {
+    background-color: #25252f;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.chart-box h3 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #f5f5f7;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.pie-chart-container, .bar-chart-container {
+    height: 300px;
+    position: relative;
+}
+
+.segmentation-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.segment-card {
+    background-color: #25252f;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.segment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.segment-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+}
+
+.segment-card.premium::before {
+    background: linear-gradient(to right, #ffd700, #ff9d00);
+}
+
+.segment-card.budget::before {
+    background: linear-gradient(to right, #00d9b5, #00b8d4);
+}
+
+.segment-card.urban::before {
+    background: linear-gradient(to right, #6c63ff, #536dfe);
+}
+
+.segment-card.rural::before {
+    background: linear-gradient(to right, #42d77d, #00a86b);
+}
+
+.segment-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.segment-card h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #f5f5f7;
+    font-size: 1.2rem;
+}
+
+.segment-stat {
+    color: #f5f5f7;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+}
+
+.segment-card p {
+    color: #b8b8c0;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.segment-metrics {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.metric {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    padding: 0.75rem;
+}
+
+.metric-label {
+    font-size: 0.8rem;
+    color: #b8b8c0;
+    margin-bottom: 0.25rem;
+}
+
+.metric-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #f5f5f7;
+}
+
+.segmentation-insights {
+    background-color: #25252f;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.segmentation-insights h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #f5f5f7;
+    font-size: 1.2rem;
+}
+
+.insights-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1rem;
+}
+
+.insights-list li {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    color: #b8b8c0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.insights-list li strong {
+    color: #f5f5f7;
+}
+
+@media (max-width: 992px) {
+    .segmentation-charts {
+        grid-template-columns: 1fr;
+    }
+    
+    .insights-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .segmentation-cards {
+        grid-template-columns: 1fr;
+    }
+}
+        
+        .contact-section {
+            padding: 5rem 0;
+            background-color: var(--secondary-color);
+            border-radius: var(--border-radius);
+            margin: 5rem 0;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+        
+        .contact-info {
+            padding: 2rem;
+        }
+        
+        .contact-form {
+            padding: 2rem;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--light-text);
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border-radius: var(--border-radius);
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-button {
+            background: linear-gradient(45deg, var(--primary-color), var(--primary-light));
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 2rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+            box-shadow: var(--button-shadow);
+            width: 100%;
+        }
+        
+        .submit-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+        }
+        
+        footer {
+            background-color: var(--secondary-color);
+            padding: 4rem 0 2rem;
+            color: var(--light-text);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-column h3 {
+            color: var(--primary-light);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-links a {
+            color: var(--light-text);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--light-text);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .footer-bottom p {
+            color: var(--muted-text);
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 992px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .hero-text {
+                margin-bottom: 3rem;
+                max-width: 100%;
+            }
+            
+            .hero-image {
+                width: 80%;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                padding-left: 60px;
+                padding-right: 0;
+                text-align: left;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-date,
+            .timeline-item:nth-child(even) .timeline-date {
+                left: 0;
+                right: auto;
+                top: -40px;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-dot,
+            .timeline-item:nth-child(even) .timeline-dot {
+                left: 10px;
+                right: auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero-image {
+                width: 100%;
+            }
+            
+            .card-grid,
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .section {
+                padding: 3rem 0;
+            }
+            
+            .card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">Ola<span>Electric</span></a>
+                <nav>
+                    <ul>
+                        <li><a href="#problem">Problem</a></li>
+                        <li><a href="#data">Data Analysis</a></li>
+                        <li><a href="#root-cause">Root Cause</a></li>
+                        <li><a href="#strategy">Strategy</a></li>
+                        <li><a href="#implementation">Implementation</a></li>
+                        <li><a href="#metrics">Metrics</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Transforming Customer Experience at Ola Electric</h1>
+                    <p>A comprehensive strategy to address key pain points and establish industry-leading standards for customer satisfaction and brand loyalty.</p>
+                    <a href="#problem" class="cta-button">Explore Strategy</a>
+                </div>
+                <div class="hero-image">
+                    <img src="/api/placeholder/600/400" alt="Ola Electric Customer Experience">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="problem" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Problem Definition & Objectives</h2>
+                <p>Identifying key areas driving customer dissatisfaction and setting measurable improvement targets.</p>
+            </div>
+            
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">📉</div>
+                    <h3>Poor Customer Satisfaction</h3>
+                    <p>Customer satisfaction scores have dropped by 32% in the last two quarters, with service quality and response time being key concerns.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">⏱️</div>
+                    <h3>Extended Service Times</h3>
+                    <p>Average service center resolution time is 9.2 days compared to industry standard of 3 days, creating significant customer frustration.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔄</div>
+                    <h3>Repeat Issues</h3>
+                    <p>43% of service center visits are for repeat issues, indicating ineffective first-time resolution and quality control challenges.</p>
+                </div>
+            </div>
+            
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-number">24.8%</div>
+                    <div class="stat-label">Customer Satisfaction</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">9.2</div>
+                    <div class="stat-label">Days Avg. Resolution Time</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">1%</div>
+                    <div class="stat-label">Repeat Service Issues</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">38%</div>
+                    <div class="stat-label">NPS Score</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="data" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Data Analysis & Insights</h2>
+                <p>Comprehensive analysis of customer feedback, service records, and operational metrics to identify improvement opportunities.</p>
+            </div>
+            
+            <div class="tabs">
+                <ul class="tab-list">
+                    <li class="tab-item active" data-tab="sentiment">Sentiment Analysis</li>
+<li class="tab-item" data-tab="segmentation">Customer Segmentation</li>
+                    <li class="tab-item" data-tab="service">Service Metrics</li>
+                    <li class="tab-item" data-tab="feedback">Customer Feedback</li>
+                    <li class="tab-item" data-tab="regional">Regional Analysis</li>
+
+<li class="tab-item" data-tab="taxonomy">Complaint Taxonomy</li>
+                </ul>
+<div id="segmentation" class="tab-panel">
+    <div class="segmentation-container">
+        <div class="segmentation-charts">
+            <div class="chart-box">
+                <h3>Customer Segments</h3>
+                <div class="pie-chart-container">
+                    <canvas id="segmentationChart"></canvas>
+                </div>
+            </div>
+            <div class="chart-box">
+                <h3>Retention Rate by Segment</h3>
+                <div class="bar-chart-container">
+                    <canvas id="retentionChart"></canvas>
+                </div>
+            </div>
+        </div>
+        
+        <div class="segmentation-cards">
+            <div class="segment-card premium">
+                <div class="segment-icon">🏆</div>
+                <h4>Premium Users</h4>
+                <p class="segment-stat">28% of Customer Base</p>
+                <p>Repeat buyers preferring high-end variants (S1 Pro), with higher average spend and brand loyalty.</p>
+                <div class="segment-metrics">
+                    <div class="metric">
+                        <span class="metric-label">Retention Rate</span>
+                        <span class="metric-value">82%</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Service Visits</span>
+                        <span class="metric-value">2.8/yr</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="segment-card budget">
+                <div class="segment-icon">💰</div>
+                <h4>Budget Users</h4>
+                <p class="segment-stat">42% of Customer Base</p>
+                <p>Price-sensitive customers focused on affordability and value, highest risk of competitive churn.</p>
+                <div class="segment-metrics">
+                    <div class="metric">
+                        <span class="metric-label">Retention Rate</span>
+                        <span class="metric-value">61%</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Service Visits</span>
+                        <span class="metric-value">3.4/yr</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="segment-card urban">
+                <div class="segment-icon">🏙️</div>
+                <h4>Urban Users</h4>
+                <p class="segment-stat">56% of Customer Base</p>
+                <p>City dwellers with concerns about charging infrastructure and service center wait times.</p>
+                <div class="segment-metrics">
+                    <div class="metric">
+                        <span class="metric-label">Retention Rate</span>
+                        <span class="metric-value">75%</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Service Visits</span>
+                        <span class="metric-value">2.6/yr</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="segment-card rural">
+                <div class="segment-icon">🌿</div>
+                <h4>Rural Users</h4>
+                <p class="segment-stat">22% of Customer Base</p>
+                <p>Facing infrastructure challenges and limited access to service centers, higher service dissatisfaction.</p>
+                <div class="segment-metrics">
+                    <div class="metric">
+                        <span class="metric-label">Retention Rate</span>
+                        <span class="metric-value">53%</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Service Visits</span>
+                        <span class="metric-value">4.2/yr</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="segmentation-insights">
+            <h3>Key Insights</h3>
+            <ul class="insights-list">
+                <li><strong>Premium Users (28%):</strong> Most profitable segment with highest retention rate (82%) but expects premium service experience.</li>
+                <li><strong>Budget Users (42%):</strong> Largest segment with moderate retention (61%) - highly sensitive to service costs and wait times.</li>
+                <li><strong>Urban vs Rural Split:</strong> Urban users have 41% higher satisfaction with service quality but rural users represent critical growth opportunity.</li>
+                <li><strong>Service Visit Frequency:</strong> Rural users have 62% more service visits annually, indicating potential product reliability issues.</li>
+                <li><strong>Retention Drivers:</strong> Service quality impacts retention 2.4x more than product features for all segments except premium users.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="taxonomy" class="tab-panel">
+    <div class="taxonomy-container">
+        <div class="taxonomy-description">
+            <h3>Complaint Categorization System</h3>
+            <p>A hierarchical classification of customer complaints with severity indicators to standardize issue reporting and resolution tracking.</p>
+        </div>
+        
+        <div class="taxonomy-categories">
+            <div class="taxonomy-category">
+                <div class="category-header">
+                    <div class="category-icon">🔋</div>
+                    <h4>Battery Issues</h4>
+                    <div class="severity-indicator high">High Severity</div>
+                </div>
+                <ul class="subcategory-list">
+                    <li>
+                        <span class="subcategory-name">Rapid Discharge</span>
+                        <span class="severity-badge" data-level="5">5</span>
+                    </li>
+                    <li>
+                        <span class="subcategory-name">Charging Failure</span>
+                        <span class="severity-badge" data-level="5">5</span>
+                    </li>
+                    <li>
+                        <span class="subcategory-name">Range Inconsistency</span>
+                        <span class="severity-badge" data-level="4">4</span>
+                    </li>
+                    <li>
+                        <span class="subcategory-name">Battery Management System Errors</span>
+                        <span class="severity-badge" data-level="4">4</span>
+                    </li>
+                    <li>
+                        <span class="subcategory-name">Thermal Management Issues</span>
+                        <span class="severity-badge" data-level="4">4</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="taxonomy-category">
+                <div class="category-header">
+                    <div class="category-icon">🛠️</div>
+                    <h4>Hardware Issues</h4>
+                    <div class="severity-indicator high">High Severity</div>
+                </div>
+                <ul class="subcategory-list">
+                    <li>
+                        <span class="subcategory-name">Motor Malfunction</span>
+                        <span class="severity-badge" data-level="5">5</span>
+                    </li>
+                    <li>
+                        <span class="subcategory-name">Display/Dashboard Errors</span>
+                        <span class="severity-badge" data-level="3">3</span>
+                    </li>
+                    <li>
+                        <span class="subcategory-name">Braking System Issues</span>
+                        <span class="severity-badge" data-level="5">5</span>
+                    </li>
+                    <li>
+                        <span class="subcategory-name">Suspension Problems</span>
+                        <span class="severity-badge" data-level="4">4</span>
+                    </li>
+                    <li>
+                        <span class="subcategory-name">Physical Damage/Manufacturing Defects</span>
+                        <span class="severity-badge" data-level="3">3</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="taxonomy-category">
+                <div class="category-header">
+                    <div class="category-icon">📱</div>
+                    <h4>App & Software Issues</h4>
+                    <div class="severity-indicator medium">Medium Severity</div>
+                </div>
+                <ul class="subcategory-list">
+                    <li>
+                        <span class="subcategory-name">App Connectivity Issues</span>
+                        <span class="severity-badge" data-level="3">3</span>
+                    </li>
+                    <li>
+                        <span class="subcategory-name">Feature Malfunctions</span>
+                        <span class="severity-badge" data-level="2">2</span>
+                    </li>
+                    <li>
+                        <span class="subcategory-name">OS Update Problems</span>
+                        <span class="severity-badge" data-level="4">4</span>
+                    </li>
+                    <li>
+                        <span class="subcategory-name">Navigation Errors</span>
+                        <span class="severity-badge" data-level="2">2</span>
+                    </li>
+                    <li>
+                        <span class="subcategory-name">User Interface Problems</span>
+                        <span class="severity-badge" data-level="1">1</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="taxonomy-category">
+                <div class="category-header">
+                    <div class="category-icon">👥</div>
+                    <h4>Support & Service Issues</h4>
+                    <div class="severity-indicator medium">Medium Severity</div>
+                </div>
+                <ul class="subcategory-list">
+                    <li>
+                        <span class="subcategory-name">Long Service Wait Times</span>
+                        <span class="severity-badge" data-level="4">4</span>
+                    </li>
+                    <li>
+                        <span class="subcategory-name">Poor Communication</span>
+                        <span class="severity-badge" data-level="3">3</span>
+                    </li>
+                    <li>
+                        <span class="subcategory-name">Parts Availability Issues</span>
+                        <span class="severity-badge" data-level="4">4</span>
+                    </li>
+                    <li>
+                        <span class="subcategory-name">Inadequate Technical Expertise</span>
+                        <span class="severity-badge" data-level="3">3</span>
+                    </li>
+                    <li>
+                        <span class="subcategory-name">Warranty/Claim Disputes</span>
+                        <span class="severity-badge" data-level="4">4</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        
+        </div>
+    </div>
+</div>
+                
+                <div class="tab-content">
+                    <div id="sentiment" class="tab-panel active">
+                        <div class="chart-container">
+                            <canvas id="sentimentChart"></canvas>
+                        </div>
+                        <p>Customer sentiment analysis shows a significant decline in positive sentiment around service center experiences and after-sales support. The analysis of 25,000+ social media posts, 12,000 customer reviews, and 8,000 service center feedback forms reveals major pain points in service timing, parts availability, and staff knowledge.</p>
+                    </div>
+                    
+                    <div id="service" class="tab-panel">
+                        <div class="chart-container">
+                            <canvas id="serviceChart"></canvas>
+                        </div>
+                        <p>Service metrics indicate significant bottlenecks in the diagnostic process (2.3 days) and parts procurement (4.1 days). The industry standard for electric vehicle diagnostics is 0.5 days, and parts procurement is 1.5 days. This represents a critical area for operational improvement.</p>
+                    </div>
+                    
+                    <div id="feedback" class="tab-panel">
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Top Complaint Categories</th>
+                                        <th>Frequency</th>
+                                        <th>Avg. Severity Rating</th>
+                                        <th>Trend</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Long wait times for service</td>
+                                        <td>68%</td>
+                                        <td>4.7/5</td>
+                                        <td>↑ 16%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Repeat vehicle issues</td>
+                                        <td>43%</td>
+                                        <td>4.9/5</td>
+                                        <td>↑ 12%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Poor communication</td>
+                                        <td>56%</td>
+                                        <td>4.2/5</td>
+                                        <td>↑ 9%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Parts availability</td>
+                                        <td>49%</td>
+                                        <td>4.5/5</td>
+                                        <td>↑ 22%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Staff technical knowledge</td>
+                                        <td>37%</td>
+                                        <td>3.8/5</td>
+                                        <td>↑ 7%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div id="regional" class="tab-panel">
+                        <div class="chart-container">
+                            <canvas id="regionalChart"></canvas>
+                        </div>
+                        <p>Regional analysis shows significant variance in service quality across regions. Urban centers in South and West India show 23% better satisfaction scores than North and East regions. Metro cities have 17% better resolution times than tier 2 cities, indicating training and resource allocation opportunities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="root-cause" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Root Cause Analysis</h2>
+                <p>Identifying the underlying factors driving customer experience issues through comprehensive causal analysis.</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Service Center Operations</h3>
+                        <p>Current service centers operate on legacy ICE vehicle processes, creating inefficiencies when diagnosing and servicing electric vehicles. Technician expertise primarily oriented to conventional vehicles.</p>
+                    </div>
+                    <div class="timeline-date">Primary</div>
+                    <div class="timeline-dot"></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Supply Chain Management</h3>
+                        <p>Decentralized inventory system without real-time tracking creates parts availability issues. Average parts procurement time of 4.1 days vs industry standard of 1.5 days.</p>
+                    </div>
+                    <div class="timeline-date">Primary</div>
+                    <div class="timeline-dot"></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Staff Training & Expertise</h3>
+                        <p>Technical staff receive only 12 hours of EV-specific training compared to industry standard of 80+ hours. Knowledge gaps in EV diagnostics and troubleshooting.</p>
+                    </div>
+                    <div class="timeline-date">Secondary</div>
+                    <div class="timeline-dot"></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Communication Systems</h3>
+                        <p>No centralized customer communication platform. Updates provided manually by service advisors with 32% accuracy in estimated completion times.</p>
+                    </div>
+                    <div class="timeline-date">Secondary</div>
+                    <div class="timeline-dot"></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Quality Control</h3>
+                        <p>Limited pre-delivery and post-service quality checks. Only 17% of service centers perform comprehensive diagnostic scans post-repair.</p>
+                    </div>
+                    <div class="timeline-date">Tertiary</div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="strategy" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Strategic Improvement Plan</h2>
+                <p>Comprehensive strategy to transform customer experience through systematic operational and service improvements.</p>
+            </div>
+            
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">🔧</div>
+                    <h3>Service Transformation</h3>
+                    <p>Redesign service center operations with EV-first processes, introducing specialized diagnostic equipment and standardized repair protocols.</p>
+                    <div class="tags">
+                        <span class="tag priority-high">High Priority</span>
+                        <span class="tag">Q2 2023</span>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h3>Inventory Management System</h3>
+                    <p>Implement centralized inventory management platform with predictive stocking based on regional demand patterns and real-time visibility.</p>
+                    <div class="tags">
+                        <span class="tag priority-high">High Priority</span>
+                        <span class="tag">Q2-Q3 2023</span>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">👨‍🔧</div>
+                    <h3>Technical Excellence Program</h3>
+                    <p>Launch comprehensive 120-hour EV technical training program with certification requirements and ongoing skill development.</p>
+                    <div class="tags">
+                        <span class="tag priority-medium">Medium Priority</span>
+                        <span class="tag">Q3 2023</span>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <h3>Customer Communication Platform</h3>
+                    <p>Deploy integrated communication system with automated service updates, repair tracking, and two-way communication capabilities.</p>
+                    <div class="tags">
+                        <span class="tag priority-medium">Medium Priority</span>
+                        <span class="tag">Q3-Q4 2023</span>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">✅</div>
+                    <h3>Quality Assurance Framework</h3>
+                    <p>Establish rigorous pre-delivery and post-service inspection protocols with mandatory diagnostic verification and customer sign-off.</p>
+                    <div class="tags">
+                        <span class="tag priority-medium">Medium Priority</span>
+                        <span class="tag">Q4 2023</span>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🏆</div>
+                    <h3>Service Excellence Incentives</h3>
+                    <p>Implement performance-based incentive structure rewarding first-time fix rates, customer satisfaction scores and service efficiency.</p>
+                    <div class="tags">
+                        <span class="tag priority-low">Low Priority</span>
+                        <span class="tag">Q1 2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="implementation" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Implementation Roadmap</h2>
+                <p>Detailed action plan with specific milestones, timelines, and responsibilities to ensure successful execution.</p>
+            </div>
+            
+            <div class="tabs">
+                <ul class="tab-list">
+                    <li class="tab-item active" data-tab="phase1">Phase 1</li>
+                    <li class="tab-item" data-tab="phase2">Phase 2</li>
+                    <li class="tab-item" data-tab="phase3">Phase 3</li>
+                </ul>
+                
+                <div class="tab-content">
+                    <div id="phase1" class="tab-panel active">
+                        <h3>Phase 1: Immediate Improvements (Q2 2023)</h3>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Action Item</th>
+                                        <th>Timeline</th>
+                                        <th>Responsibility</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Launch emergency parts procurement system</td>
+                                        <td>April 2023</td>
+                                        <td>Supply Chain Director</td>
+                                        <td>Planning</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Implement interim service SLAs and monitoring</td>
+                                        <td>April 2023</td>
+                                        <td>Service Operations Head</td>
+                                        <td>Planning</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Deploy rapid response technical teams to high-volume centers</td>
+                                        <td>May 2023</td>
+                                        <td>Technical Director</td>
+                                        <td>Not Started</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Initiate basic customer SMS update system</td>
+                                        <td>May 2023</td>
+                                        <td>IT Director</td>
+                                        <td>Not Started</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Launch weekend service hours at high-volume locations</td>
+                                        <td>June 2023</td>
+                                        <td>Regional Managers</td>
+                                        <td>Not Started</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div id="phase2" class="tab-panel">
+                        <h3>Phase 2: Structural Improvements (Q3-Q4 2023)</h3>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Action Item</th>
+                                        <th>Timeline</th>
+                                        <th>Responsibility</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Roll out comprehensive technician training program</td>
+                                        <td>July-Sept 2023</td>
+                                        <td>Training Director</td>
+                                        <td>Planning</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Implement centralized inventory management system</td>
+                                        <td>July-Aug 2023</td>
+                                        <td>Supply Chain Director</td>
+                                        <td>Not Started</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Establish regional parts distribution centers</td>
+                                        <td>Aug-Oct 2023</td>
+                                        <td>Logistics Director</td>
+                                        <td>Not Started</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Deploy customer service mobile app with tracking</td>
+                                        <td>Sept-Nov 2023</td>
+                                        <td>Digital Product Manager</td>
+                                        <td>Not Started</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Implement standardized diagnosis and repair protocols</td>
+                                        <td>Oct-Dec 2023</td>
+                                        <td>Service Quality Director</td>
+                                        <td>Not Started</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div id="phase3" class="tab-panel">
+                        <h3>Phase 3: Excellence & Differentiation (Q1-Q2 2024)</h3>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Action Item</th>
+                                        <th>Timeline</th>
+                                        <th>Responsibility</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Launch service excellence incentive program</td>
+                                        <td>Jan 2024</td>
+                                        <td>HR Director</td>
+                                        <td>Not Started</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Implement advanced diagnostics with AI capabilities</td>
+                                        <td>Jan-Mar 2024</td>
+                                        <td>Technology Director</td>
+                                        <td>Not Started</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Roll out premium service experience program</td>
+                                        <td>Feb-Apr 2024</td>
+                                        <td>Customer Experience Director</td>
+                                        <td>Not Started</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Establish customer advocacy program</td>
+                                        <td>Mar-May 2024</td>
+                                        <td>Marketing Director</td>
+                                        <td>Not Started</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Launch predictive maintenance offering</td>
+                                        <td>Apr-Jun 2024</td>
+                                        <td>Product Director</td>
+                                        <td>Not Started</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="metrics" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Success Metrics & Targets</h2>
+                <p>Key performance indicators to measure progress and success of the customer experience improvement strategy.</p>
+            </div>
+            
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Customer Satisfaction</h3>
+                    <p>Current: 68%</p>
+                    <p>Target: 90%</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 68%;"></div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>Average Resolution Time</h3>
+                    <p>Current: 9.2 days</p>
+                    <p>Target: 3 days</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 33%;"></div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>Net Promoter Score</h3>
+                    <p>Current: 38</p>
+                    <p>Target: 70</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 54%;"></div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>First Time Fix Rate</h3>
+                    <p>Current: 57%</p>
+                    <p>Target: 85%</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 67%;"></div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>Parts Availability</h3>
+                    <p>Current: 72%</p>
+                    <p>Target: 95%</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 76%;"></div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>Customer Communication Rating</h3>
+                    <p>Current: 3.2/5</p>
+                    <p>Target: 4.5/5</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 64%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial-section">
+        <div class="container testimonial-container">
+            <div class="section-header">
+                <h2>Voice of the Customer</h2>
+                <p>Insights from real customers about their experiences and expectations.</p>
+            </div>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">I love my Ola S1 Pro, but the service experience needs serious improvement. Waited 11 days for a simple battery issue to be resolved. The technology is great, but the support doesn't match.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="/api/placeholder/50/50" alt="Rahul Sharma">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Rahul Sharma</h4>
+                            <p>S1 Pro Owner, Mumbai</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">The same issue has recurred three times on my scooter. Each time, I have to wait several days for service. The technicians seem undertrained on electric vehicles. Very frustrating experience.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="/api/placeholder/50/50" alt="Priya Desai">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Priya Desai</h4>
+                            <p>S1 Owner, Bangalore</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">Communication is the biggest issue. No updates on service progress, no clarity on when my scooter will be ready. I literally have to call multiple times a day to get any information.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="/api/placeholder/50/50" alt="Vikram Patel">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Vikram Patel</h4>
+                            <p>S1 Pro Owner, Delhi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Have questions or feedback about our customer experience improvement initiative?</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>We welcome your thoughts and suggestions on how we can better serve our customers. Your feedback is an essential part of our continuous improvement process.</p>
+                    <p>Email: customerexperience@olaelectric.com</p>
+                    <p>Phone: +91 80 4567 8900</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" class="form-control" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" class="form-control" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Ola Electric</h3>
+                    <p>Revolutionizing the future of mobility through sustainable electric vehicles and exceptional customer experiences.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#problem">Problem Statement</a></li>
+                        <li><a href="#data">Data Analysis</a></li>
+                        <li><a href="#root-cause">Root Causes</a></li>
+                        <li><a href="#strategy">Strategy</a></li>
+                        <li><a href="#implementation">Implementation</a></li>
+                        <li><a href="#metrics">Success Metrics</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Service Locations</a></li>
+                        <li><a href="#">Customer Support</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Owner's Manual</a></li>
+                        <li><a href="#">Service Booking</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Warranty Information</a></li>
+                        <li><a href="#">Recall Information</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Ola Electric. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab functionality
+        const tabItems = document.querySelectorAll('.tab-item');
+        const tabPanels = document.querySelectorAll('.tab-panel');
+        
+        tabItems.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabId = tab.getAttribute('data-tab');
+                
+                tabItems.forEach(item => item.classList.remove('active'));
+                tabPanels.forEach(panel => panel.classList.remove('active'));
+                
+                tab.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+// Add this to your existing script section
+document.addEventListener('DOMContentLoaded', function() {
+    // Segmentation Chart
+    if (document.getElementById('segmentationChart')) {
+        const segmentationCtx = document.getElementById('segmentationChart').getContext('2d');
+        const segmentationChart = new Chart(segmentationCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Premium Users', 'Budget Users', 'Urban Users', 'Rural Users'],
+                datasets: [{
+                    data: [28, 42, 56, 22],
+                    backgroundColor: [
+                        'rgba(255, 215, 0, 0.7)',
+                        'rgba(0, 217, 181, 0.7)',
+                        'rgba(108, 99, 255, 0.7)',
+                        'rgba(66, 215, 125, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 215, 0, 1)',
+                        'rgba(0, 217, 181, 1)',
+                        'rgba(108, 99, 255, 1)',
+                        'rgba(66, 215, 125, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: '#b8b8c0',
+                            padding: 15,
+                            usePointStyle: true,
+                            pointStyle: 'circle'
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.label + ': ' + context.raw + '%';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    // Retention Chart
+    if (document.getElementById('retentionChart')) {
+        const retentionCtx = document.getElementById('retentionChart').getContext('2d');
+        const retentionChart = new Chart(retentionCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Premium Users', 'Budget Users', 'Urban Users', 'Rural Users'],
+                datasets: [{
+                    label: 'Retention Rate',
+                    data: [82, 61, 75, 53],
+                    backgroundColor: [
+                        'rgba(255, 215, 0, 0.7)',
+                        'rgba(0, 217, 181, 0.7)',
+                        'rgba(108, 99, 255, 0.7)',
+                        'rgba(66, 215, 125, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 215, 0, 1)',
+                        'rgba(0, 217, 181, 1)',
+                        'rgba(108, 99, 255, 1)',
+                        'rgba(66, 215, 125, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return 'Retention Rate: ' + context.raw + '%';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.05)'
+                        },
+                        ticks: {
+                            color: '#8a8a9a'
+                        }
+                    },
+                    y: {
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.05)'
+                        },
+                        ticks: {
+                            color: '#8a8a9a'
+                        },
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+    }
+});
+
+        
+        // Charts
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sentiment Analysis Chart
+            const sentimentCtx = document.getElementById('sentimentChart').getContext('2d');
+            const sentimentChart = new Chart(sentimentCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+                    datasets: [
+                        {
+                            label: 'Positive Sentiment',
+                            data: [72, 68, 65, 61, 58, 54, 52, 50, 48],
+                            borderColor: '#00d9b5',
+                            backgroundColor: 'rgba(0, 217, 181, 0.1)',
+                            tension: 0.4,
+                            fill: true
+                        },
+                        {
+                            label: 'Negative Sentiment',
+                            data: [28, 32, 35, 39, 42, 46, 48, 50, 52],
+                            borderColor: '#ff6b9d',
+                            backgroundColor: 'rgba(255, 107, 157, 0.1)',
+                            tension: 0.4,
+                            fill: true
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                           labels: {
+                                color: '#b8b8c0'
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Customer Sentiment Trend (2023)',
+                            color: '#f5f5f7',
+                            font: {
+                                size: 16
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.05)'
+                            },
+                            ticks: {
+                                color: '#8a8a9a'
+                            }
+                        },
+                        y: {
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.05)'
+                            },
+                            ticks: {
+                                color: '#8a8a9a'
+                            }
+                        }
+                    }
+                }
+            });
+            
+            // Service Metrics Chart
+            const serviceCtx = document.getElementById('serviceChart').getContext('2d');
+            const serviceChart = new Chart(serviceCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Intake Process', 'Diagnostics', 'Parts Procurement', 'Repair Time', 'QC & Delivery'],
+                    datasets: [
+                        {
+                            label: 'Current Process (Days)',
+                            data: [0.8, 2.3, 4.1, 1.5, 0.5],
+                            backgroundColor: '#6c63ff'
+                        },
+                        {
+                            label: 'Industry Standard (Days)',
+                            data: [0.3, 0.5, 1.5, 0.5, 0.2],
+                            backgroundColor: '#00d9b5'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                color: '#b8b8c0'
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Service Process Breakdown',
+                            color: '#f5f5f7',
+                            font: {
+                                size: 16
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.05)'
+                            },
+                            ticks: {
+                                color: '#8a8a9a'
+                            }
+                        },
+                        y: {
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.05)'
+                            },
+                            ticks: {
+                                color: '#8a8a9a'
+                            }
+                        }
+                    }
+                }
+            });
+            
+            // Regional Analysis Chart
+            const regionalCtx = document.getElementById('regionalChart').getContext('2d');
+            const regionalChart = new Chart(regionalCtx, {
+                type: 'radar',
+                data: {
+                    labels: ['Delhi NCR', 'Mumbai', 'Bangalore', 'Chennai', 'Kolkata', 'Hyderabad', 'Pune'],
+                    datasets: [
+                        {
+                            label: 'Customer Satisfaction Score',
+                            data: [62, 76, 78, 71, 59, 74, 68],
+                            borderColor: '#6c63ff',
+                            backgroundColor: 'rgba(108, 99, 255, 0.2)'
+                        },
+                        {
+                            label: 'Resolution Time (Days)',
+                            data: [10.2, 7.4, 7.1, 8.3, 11.6, 7.8, 8.9],
+                            borderColor: '#ff6b9d',
+                            backgroundColor: 'rgba(255, 107, 157, 0.2)'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                color: '#b8b8c0'
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Regional Service Performance',
+                            color: '#f5f5f7',
+                            font: {
+                                size: 16
+                            }
+                        }
+                    },
+                    scales: {
+                        r: {
+                            angleLines: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.05)'
+                            },
+                            pointLabels: {
+                                color: '#b8b8c0'
+                            },
+                            ticks: {
+                                backdropColor: 'transparent',
+                                color: '#8a8a9a'
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
