@@ -74,12 +74,6 @@ Contributions are welcome! If you have suggestions for improvements, new visuali
 
 ---
 
-## 📧 Contact
-
-For questions or feedback, reach out via [customerexperience@olaelectric.com](mailto:customerexperience@olaelectric.com).
-
----
-
 ## 📜 License
 
 This project is provided for academic and demonstration purposes. You may use, modify, and share it with attribution.
